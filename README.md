@@ -1,3 +1,11 @@
+## project
+information（项目资料）：https://github.com/zcfil/sunfil-material.git  
+
+server（后端服务）：https://github.com/zcfil/sunfil-server.git  
+
+web（前端）：https://github.com/zcfil/sunfil-web.git  
+
+
 ## sunfil项目结构
 
 ```shell
@@ -52,9 +60,9 @@ rate.sol关联：
 DebtTokens.sol，manageNode.sol，sunPond.sol，StakingPool.sol
 
 sunPond.sol关联：
-地址支付权限：
+地址支付权限（sunPond合约部署一起来以后要将StakingPool合约、opNode合约、manageNode合约的部署地址分别传入sunPond合约GrantPayableAuthority接口，用以获取支付权限）：
 GrantPayableAuthority: StakingPool.sol,opNode.sol,manageNode.sol
-地址操作权限：
+地址操作权限（sunPond合约部署一起来以后要将StakingPool合约、opNode合约、manageNode合约的部署地址分别传入sunPond合约'GrantOpAuthority'接口，用以地址操作权限）：
 GrantOpAuthority: StakingPool.sol,opNode.sol,manageNode.sol
 
 opNode.sol关联：
