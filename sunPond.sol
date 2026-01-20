@@ -96,9 +96,6 @@ contract SunPond {
        payable(_address).transfer(amount);
     }
 
-    // Currency transfer from address to contract (payable)
-    function addressToContract() external payable{}
-
     // Node withdrawal
     function withdraw(uint64 target, uint256 amount) external onlyOpContract() {
         // Withdrawal to internal contract
@@ -140,12 +137,7 @@ contract SunPond {
     }
 
     // Transferring Coins from Contracts to Nodes
-    function send(uint64 target,uint256 value) external payable { 
+    function send(uint64 target,uint256 value) external payable onlyPayableContract { 
         SendAPI.send(CommonTypes.FilActorId.wrap(target),value);
-    }
-
-    // Transfer currency from contract to fil address
-    function send(CommonTypes.FilAddress memory target, uint256 value) internal {
-        SendAPI.send(target,value);
     }
 }
