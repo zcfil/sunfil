@@ -30,7 +30,7 @@ contract OpNode {
     address admin;           // Administrator address
 
     address public debtAddress;   // Loan Contract Address
-    address public rateAddress = 0xdb4e6Bff063de9D104280067b1e9e3d3644b36f4;   // Interest rate contract address
+    address public rateAddress;   // Interest rate contract address
     address public manageAddress;   // Node Contract Address
     address public pondAddress;   // Fund pool sub contract address
     address operateAddr;        // Operating profit distribution address
