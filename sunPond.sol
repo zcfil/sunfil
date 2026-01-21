@@ -35,6 +35,8 @@ contract SunPond {
         admin = _admin;
     }
 
+    function addressToContract() external payable{}
+
     // Payment constraints
     modifier onlyPayableContract() {
         bool auth = false;
